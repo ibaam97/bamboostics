@@ -2,22 +2,22 @@ import Link from "next/link";
 
 const footerLinks = {
   Products: [
-    { label: "Raw Bamboo", href: "/products#raw" },
-    { label: "Bamboo Flooring", href: "/products#flooring" },
-    { label: "Bamboo Furniture", href: "/products#furniture" },
-    { label: "Bamboo Textiles", href: "/products#textiles" },
+    { label: "Processing Pipeline", href: "/products#pipeline" },
+    { label: "Raw & Treated Poles", href: "/products" },
+    { label: "Strips & Laminated Boards", href: "/products" },
+    { label: "Finished Goods", href: "/products" },
   ],
   Company: [
-    { label: "About Us", href: "/about" },
-    { label: "Our Farm", href: "/about#farm" },
-    { label: "Sustainability", href: "/about#sustainability" },
-    { label: "Careers", href: "/contact" },
-  ],
-  Support: [
+    { label: "About Bamboostic", href: "/about" },
+    { label: "FUNAAB Joint Venture", href: "/about" },
+    { label: "Our Story", href: "/about" },
     { label: "Contact", href: "/contact" },
+  ],
+  "Work With Us": [
+    { label: "Supply & Procurement", href: "/contact" },
+    { label: "Export & Trade", href: "/contact" },
+    { label: "Invest / Partner", href: "/contact" },
     { label: "FAQ", href: "/contact#faq" },
-    { label: "Shipping", href: "/contact" },
-    { label: "Wholesale", href: "/contact" },
   ],
 };
 
@@ -42,13 +42,24 @@ export default function Footer() {
                 </svg>
               </div>
               <span className="text-2xl font-bold text-white tracking-tight">
-                Bamboo<span className="text-bamboo-400">stics</span>
+                Bamboo<span className="text-bamboo-400">stic</span>
               </span>
             </Link>
-            <p className="text-bamboo-300 leading-relaxed max-w-sm mb-8">
-              Growing the future with sustainable bamboo. From our farms to your hands — premium bamboo
-              raw materials and finished products crafted with care for people and planet.
+            <p className="text-bamboo-300 leading-relaxed max-w-sm mb-5">
+              Nigeria&apos;s vertically integrated bamboo company — from 96 ha of certified
+              farmland in Abeokuta to processed supply for manufacturers, builders,
+              and international buyers worldwide.
             </p>
+            <address className="not-italic text-sm text-bamboo-500 leading-relaxed mb-8">
+              10, Memunat Ayodeji Crescent<br />
+              Oregun, Lagos, Nigeria<br />
+              <a
+                href="mailto:info@nabattansprings.com"
+                className="hover:text-bamboo-300 transition-colors"
+              >
+                info@nabattansprings.com
+              </a>
+            </address>
             <div className="flex gap-4">
               {["Instagram", "Twitter", "LinkedIn"].map((social) => (
                 <a
@@ -85,7 +96,7 @@ export default function Footer() {
 
         <div className="mt-16 pt-8 border-t border-bamboo-800 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-bamboo-500">
-            &copy; {new Date().getFullYear()} Bamboostics. All rights reserved.
+            &copy; {new Date().getFullYear()} Narbattan Springs Ltd. Bamboostic&trade; is a registered brand.
           </p>
           <div className="flex gap-6 text-sm text-bamboo-500">
             <a href="#" className="hover:text-bamboo-300 transition-colors">Privacy Policy</a>

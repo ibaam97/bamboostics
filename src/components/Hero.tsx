@@ -76,22 +76,23 @@ export default function Hero() {
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-bamboo-100 text-bamboo-700 text-sm font-medium mb-8">
             <span className="w-2 h-2 rounded-full bg-bamboo-500 animate-pulse" />
-            Sustainable Bamboo Since 2015
+            Nigeria&apos;s Pioneering Bamboo Company · Lagos &amp; Abeokuta
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold text-bamboo-900 leading-[1.1] tracking-tight mb-8">
-            Nature&apos;s Strongest{" "}
+            The World Is Running{" "}
             <span className="relative">
-              <span className="relative z-10 text-bamboo-600">Gift</span>
+              <span className="relative z-10 text-bamboo-600">Out of Timber.</span>
               <span className="absolute bottom-2 left-0 right-0 h-3 bg-bamboo-200/60 -z-0 rounded" />
             </span>
-            ,<br />
-            Crafted for You
+            <br />
+            We Grow the Alternative.
           </h1>
 
           <p className="text-xl md:text-2xl text-bamboo-700/80 leading-relaxed mb-12 max-w-2xl">
-            From thriving bamboo groves to premium raw materials and beautifully finished products.
-            We grow, harvest, and craft bamboo with respect for the earth.
+            Bamboostic cultivates and precision-processes bamboo into premium timber alternatives
+            and industrial raw materials — built for Nigeria&apos;s construction boom,
+            positioned for a <strong className="text-bamboo-700 font-semibold">$79 billion global market</strong>.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -99,25 +100,25 @@ export default function Hero() {
               href="/products"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-bamboo-500 rounded-full hover:bg-bamboo-600 transition-all duration-300 shadow-lg shadow-bamboo-500/25 hover:shadow-xl hover:shadow-bamboo-500/30 hover:-translate-y-0.5"
             >
-              Explore Products
+              Explore Our Products
               <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
             <Link
-              href="/about"
+              href="/contact"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-bamboo-700 bg-white rounded-full hover:bg-bamboo-50 transition-all duration-300 border border-bamboo-200 hover:-translate-y-0.5"
             >
-              Our Story
+              Partner With Us
             </Link>
           </div>
 
           {/* Stats */}
           <div className="mt-20 grid grid-cols-3 gap-8 max-w-lg">
             {[
-              { value: "500+", label: "Acres Planted" },
-              { value: "10K+", label: "Products Sold" },
-              { value: "100%", label: "Sustainable" },
+              { value: "$79B", label: "Global Bamboo Market" },
+              { value: "96 ha", label: "Certified JV Farmland" },
+              { value: "20M+", label: "Nigeria Housing Deficit" },
             ].map((stat) => (
               <div key={stat.label}>
                 <div className="text-3xl md:text-4xl font-bold text-bamboo-600">{stat.value}</div>

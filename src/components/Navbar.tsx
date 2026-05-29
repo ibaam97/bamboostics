@@ -32,7 +32,7 @@ export default function Navbar() {
               </svg>
             </div>
             <span className="text-2xl font-bold text-bamboo-800 tracking-tight">
-              Bamboo<span className="text-bamboo-500">stics</span>
+              Bamboo<span className="text-bamboo-500">stic</span>
             </span>
           </Link>
 

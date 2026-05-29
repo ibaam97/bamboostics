@@ -1,62 +1,85 @@
-const testimonials = [
+const signals = [
   {
-    quote: "The bamboo flooring from Bamboostics completely transformed our home. It's stunning, durable, and we love knowing it's sustainably sourced.",
-    name: "Sarah Chen",
-    role: "Homeowner, Portland",
-    avatar: "SC",
+    stat: "Dec 2026",
+    source: "EU Deforestation Regulation",
+    headline: "A Compliance Cliff for Chinese Exporters",
+    body: "The EUDR comes into full force December 2026. Bamboo is a grass — not a tree — and is inherently exempt. African suppliers operating without deforestation risk are being positioned as the cleanest alternative in the global supply chain. Chinese exporters, who account for 67% of global bamboo trade, face growing scrutiny they cannot easily resolve.",
   },
   {
-    quote: "As an architect, I need reliable materials. Bamboostics' raw bamboo poles are consistently high quality. They've become our go-to supplier for eco-builds.",
-    name: "Michael Torres",
-    role: "Architect, Austin",
-    avatar: "MT",
+    stat: "₦6.5T",
+    source: "Nigeria Construction Industry",
+    headline: "The Biggest Building Market on the Continent",
+    body: "Nigeria's construction industry is valued at over ₦6.5 trillion, underpinned by a housing deficit exceeding 20 million units. Steel and concrete costs have risen sharply. Bamboo — structurally competitive, faster-growing, and locally sourced — is not a substitute being forced on the market. It is a substitute the market is pulling toward.",
   },
   {
-    quote: "We switched our entire product line to bamboo fiber from Bamboostics. Our customers love the quality and the sustainability story behind it.",
-    name: "Priya Patel",
-    role: "Textile Manufacturer, LA",
-    avatar: "PP",
+    stat: "$122B",
+    source: "Africa Carbon Market — Projected 2033",
+    headline: "Carbon Is Becoming a Revenue Line, Not a Side Note",
+    body: "Africa's voluntary carbon market is projected to grow from $15 billion to $122 billion by 2033. Bamboostic's cultivation model — bamboo sequesters 35% more CO₂ than most trees, regrows from existing root systems without replanting — is structured to generate verifiable carbon credits as a secondary revenue stream alongside commercial bamboo supply.",
   },
 ];
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-bamboo-50">
+    <section className="py-24 bg-sage">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 bg-bamboo-100 text-bamboo-700 rounded-full text-sm font-medium mb-4">
-            Testimonials
+        {/* Header */}
+        <div className="max-w-2xl mb-16">
+          <span className="inline-block px-4 py-1.5 bg-bamboo-100 text-bamboo-700 rounded-full text-sm font-medium mb-5">
+            Market Signals
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-bamboo-900 mb-6">
-            Loved by Builders & Dreamers
+          <h2 className="text-4xl md:text-5xl font-bold text-bamboo-900 mb-5 leading-tight">
+            The thesis is validated.
+            <br />
+            <span className="text-bamboo-600">The execution is what remains.</span>
           </h2>
+          <p className="text-bamboo-600 leading-relaxed">
+            Bamboostic is in its commercial launch phase. Rather than invent
+            the stories, here are the forces already shaping the market we are
+            entering.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((t) => (
+        {/* Signal cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          {signals.map((s) => (
             <div
-              key={t.name}
-              className="p-8 rounded-3xl bg-white border border-bamboo-100 hover:shadow-xl hover:shadow-bamboo-100/30 transition-all duration-300"
+              key={s.stat}
+              className="bg-white rounded-3xl p-8 border border-bamboo-100 hover:border-bamboo-200 hover:shadow-lg transition-all duration-300 flex flex-col"
             >
-              <div className="flex gap-1 mb-6">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-earth-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
-              <p className="text-bamboo-700 leading-relaxed mb-6 italic">&ldquo;{t.quote}&rdquo;</p>
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-bamboo-500 text-white flex items-center justify-center font-bold text-sm">
-                  {t.avatar}
+              <div className="mb-6">
+                <div className="text-4xl font-bold text-bamboo-700 mb-1">
+                  {s.stat}
                 </div>
-                <div>
-                  <div className="font-semibold text-bamboo-900">{t.name}</div>
-                  <div className="text-sm text-bamboo-500">{t.role}</div>
+                <div className="text-xs font-bold uppercase tracking-widest text-bamboo-400">
+                  {s.source}
                 </div>
               </div>
+              <h3 className="text-lg font-bold text-bamboo-900 mb-3">
+                {s.headline}
+              </h3>
+              <p className="text-sm text-bamboo-600 leading-relaxed flex-1">
+                {s.body}
+              </p>
             </div>
           ))}
+        </div>
+
+        {/* Honest footnote */}
+        <div className="bg-bamboo-900 rounded-2xl px-8 py-6 flex flex-col sm:flex-row sm:items-center gap-4">
+          <div className="w-10 h-10 rounded-full bg-bamboo-800 flex items-center justify-center shrink-0">
+            <svg className="w-5 h-5 text-bamboo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+            </svg>
+          </div>
+          <p className="text-sm text-bamboo-300 leading-relaxed">
+            <span className="text-bamboo-100 font-semibold">A note on transparency:</span>{" "}
+            Bamboostic enters commercial operations in 2026. We have no
+            fabricated customer reviews. What we have is a working operation,
+            a verified joint venture, an independent valuation, and a market
+            timing that is difficult to ignore. We would rather earn your
+            trust with facts than ask for it with fiction.
+          </p>
         </div>
       </div>
     </section>

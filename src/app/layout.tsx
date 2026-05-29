@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bamboostics — Premium Sustainable Bamboo Products",
+  title: "Bamboostic — Premium Sustainable Bamboo Products",
   description:
     "From thriving bamboo groves to premium raw materials and beautifully finished products. We grow, harvest, and craft bamboo with respect for the earth.",
 };
