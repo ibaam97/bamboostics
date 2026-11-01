@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BrandLogo from "@/components/BrandLogo";
 
 const footerLinks = {
   Products: [
@@ -28,22 +29,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-full bg-bamboo-500 flex items-center justify-center">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  className="w-6 h-6 text-white"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                >
-                  <path d="M12 2v20M12 2c-2 4-2 8 0 10M12 2c2 4 2 8 0 10M12 12c-2 4-2 8 0 10M12 12c2 4 2 8 0 10" />
-                  <path d="M8 6h8M8 12h8M8 18h8" strokeDasharray="2 2" />
-                </svg>
-              </div>
-              <span className="text-2xl font-bold text-white tracking-tight">
-                Bamboo<span className="text-bamboo-400">stic</span>
-              </span>
+            <Link href="/" aria-label="BambooStic home" className="inline-block mb-6 rounded-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-bamboo-300">
+              <BrandLogo className="w-64 max-w-full p-2" />
             </Link>
             <p className="text-bamboo-300 leading-relaxed max-w-sm mb-5">
               Nigeria&apos;s vertically integrated bamboo company — from 96 ha of certified

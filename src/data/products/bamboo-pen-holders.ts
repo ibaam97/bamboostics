@@ -25,13 +25,17 @@ export const bambooPenHolders: Product = {
   ],
   idealFor:
     "Home offices and study desks, corporate gifting and branded merchandise, hotel and guesthouse rooms, art and design studios, schools and universities, retail and gift shops.",
-  image: "/products/renders/small-culm-items-render-close-holders.jpg",
+  image: "/ai-generated/bamboo-pen-holders.jpg",
   imageAlt:
     "Close view of small bamboo culm holders showing their natural node rings and varied tones.",
   galleryImages: [
     {
-      src: "/products/renders/small-culm-items-render-hero.jpg",
-      alt: "A collection of small bamboo culm accessories arranged together.",
+      src: "/ai-generated/bamboo-pen-holders-02.jpg",
+      alt: "Bamboo pen holders arranged on a desk in a home office.",
+    },
+    {
+      src: "/ai-generated/bamboo-pen-holders-03.jpg",
+      alt: "A closer view of the bamboo holders' culm nodes and natural grain.",
     },
   ],
 };

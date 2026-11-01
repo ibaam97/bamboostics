@@ -25,7 +25,17 @@ export const bambooRollUpBlinds: Product = {
   ],
   idealFor:
     "Living rooms, bedrooms, balconies and verandas, patios and outdoor seating, restaurants and cafés, offices and co-working spaces, hotels and guesthouses.",
-  image: "/products/bamboo-roll-up-blinds.webp",
+  image: "/ai-generated/bamboo-roll-up-blinds.jpg",
   imageAlt:
     "A honey-toned bamboo roll-up blind mounted over a window, its slim horizontal slats bound with twine and gathered into a neat roll at the top.",
+  galleryImages: [
+    {
+      src: "/ai-generated/bamboo-roll-up-blinds-02-v2.jpg",
+      alt: "An alternate lifestyle view of the bamboo roll-up blind.",
+    },
+    {
+      src: "/ai-generated/bamboo-roll-up-blinds-03-v2.jpg",
+      alt: "A closer view of the bamboo blind's slats and twine bindings.",
+    },
+  ],
 };

@@ -1,0 +1,17 @@
+{
+  "servers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest"]
+    },
+    "gemini-image": {
+      "command": "node",
+      "args": ["scripts/gemini-image-mcp.mjs"],
+      "env": {
+        "MAX_REQUESTS_PER_HOUR": "140",
+        "MAX_COST_PER_HOUR": "5",
+        "GEMINI_IMAGE_AUTO_INSTALL": "0"
+      }
+    }
+  }
+}

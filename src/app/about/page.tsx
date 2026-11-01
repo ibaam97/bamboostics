@@ -3,6 +3,7 @@ import Link from "next/link";
 import Team from "@/components/Team";
 import Sustainability from "@/components/Sustainability";
 import InvestPartner from "@/components/InvestPartner";
+import BrandLogo from "@/components/BrandLogo";
 
 export const metadata: Metadata = {
   title: "About — Bamboostic",
@@ -112,6 +113,7 @@ export default function AboutPage() {
             <span className="inline-block px-4 py-1.5 bg-bamboo-100 text-bamboo-700 rounded-full text-sm font-medium mb-6">
               About Bamboostic
             </span>
+            <BrandLogo className="mb-6 w-56 max-w-full border border-bamboo-100 p-2 sm:w-64" />
             <h1 className="text-5xl md:text-6xl font-bold text-bamboo-900 mb-6 leading-tight">
               Nigeria&apos;s Bamboo Pioneer.{" "}
               <span className="text-bamboo-600">Africa&apos;s Next Export Story.</span>
@@ -295,5 +297,4 @@ export default function AboutPage() {
     </>
   );
 }
-
 

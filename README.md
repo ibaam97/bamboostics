@@ -23,9 +23,19 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
   - [`src/app/catalogue/page.tsx`](/Users/ibrahimayodeji/bamboostics/src/app/catalogue/page.tsx)
   - [`src/app/catalogue/[slug]/page.tsx`](/Users/ibrahimayodeji/bamboostics/src/app/catalogue/[slug]/page.tsx)
 - Branding assets live in [`public/branding/`](/Users/ibrahimayodeji/bamboostics/public/branding).
+- The shared [`BrandLogo`](./src/components/BrandLogo.tsx) displays the original logo in the navbar, footer, homepage hero, and About page.
 - Product render assets live in [`public/products/renders/`](/Users/ibrahimayodeji/bamboostics/public/products/renders).
 
 The app uses `next/image` for optimized image delivery on catalogue and product pages.
+Customer-facing catalogue images and galleries use the generated photographs in
+[`public/ai-generated/`](./public/ai-generated/); renders are retained only as design references.
+On product detail pages, click a thumbnail below the main image to display it in the main view.
+The main image is display-only; there is no expand or popup viewer.
+The catalogue has product-type filters for Doors, Furniture & Storage, Lighting,
+Screens & Fencing, Panels & Ceilings, Home Accessories, and Bamboo Materials.
+Select "All products" to reset the filter. Category assignments are maintained in
+[`src/data/products/categories.ts`](./src/data/products/categories.ts); each product
+must belong to exactly one type.
 
 ## Learn More
 

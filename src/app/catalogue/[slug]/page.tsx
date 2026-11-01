@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import ProductGallery from "@/components/ProductGallery";
 import { notFound } from "next/navigation";
 import {
   getAllProducts,
   getProductBySlug,
-  PRODUCT_IMAGE_WIDTH,
-  PRODUCT_IMAGE_HEIGHT,
 } from "@/data/products";
 
 type Params = { slug: string };
@@ -83,42 +81,13 @@ export default async function ProductDetailPage({
             <p className="text-xl text-bamboo-500 font-medium">{product.tagline}</p>
           </header>
 
-          {/* Hero image (above the fold — eager) */}
-          <div className="relative aspect-3/2 rounded-3xl overflow-hidden border border-bamboo-100 shadow-sm mb-12">
-            <Image
-              src={product.image}
-              alt={product.imageAlt}
-              width={PRODUCT_IMAGE_WIDTH}
-              height={PRODUCT_IMAGE_HEIGHT}
-              priority
-              sizes="(max-width: 1024px) 100vw, 1024px"
-              className={`w-full h-full ${product.imageFit === "contain" ? "object-contain bg-bamboo-50" : "object-cover"}`}
-            />
-          </div>
-
-          {galleryImages.length > 0 && (
-            <section className="mb-12">
-              <h2 className="text-2xl font-bold text-bamboo-900 mb-5">More Views</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {galleryImages.map((image) => (
-                  <div
-                    key={image.src}
-                    className="relative aspect-3/2 rounded-2xl overflow-hidden border border-bamboo-100"
-                  >
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      width={PRODUCT_IMAGE_WIDTH}
-                      height={PRODUCT_IMAGE_HEIGHT}
-                      loading="lazy"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className="w-full h-full object-contain bg-bamboo-50"
-                    />
-                  </div>
-                ))}
-              </div>
-            </section>
-          )}
+          <ProductGallery
+            name={product.name}
+            image={product.image}
+            imageAlt={product.imageAlt}
+            imageFit={product.imageFit}
+            galleryImages={galleryImages}
+          />
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Full description */}
