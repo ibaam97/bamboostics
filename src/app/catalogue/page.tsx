@@ -51,7 +51,7 @@ export default function CataloguePage() {
                     height={PRODUCT_IMAGE_HEIGHT}
                     loading="lazy"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className={`w-full h-full ${product.imageFit === "contain" ? "object-contain bg-bamboo-50" : "object-cover"} group-hover:scale-105 transition-transform duration-500`}
                   />
                 </div>
                 <div className="flex flex-col flex-1 p-6">

@@ -25,7 +25,13 @@ export const bambooPenHolders: Product = {
   ],
   idealFor:
     "Home offices and study desks, corporate gifting and branded merchandise, hotel and guesthouse rooms, art and design studios, schools and universities, retail and gift shops.",
-  image: "/products/bamboo-pen-holders.webp",
+  image: "/products/renders/small-culm-items-render-close-holders.jpg",
   imageAlt:
-    "Three natural bamboo pen holders on a wooden desk, cut from single culms with visible node rings, holding an assortment of pens and markers.",
+    "Close view of small bamboo culm holders showing their natural node rings and varied tones.",
+  galleryImages: [
+    {
+      src: "/products/renders/small-culm-items-render-hero.jpg",
+      alt: "A collection of small bamboo culm accessories arranged together.",
+    },
+  ],
 };

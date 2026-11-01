@@ -42,6 +42,8 @@ export default async function ProductDetailPage({
     notFound();
   }
 
+  const galleryImages = (product.galleryImages ?? []).filter((image) => image.src !== product.image);
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -90,9 +92,33 @@ export default async function ProductDetailPage({
               height={PRODUCT_IMAGE_HEIGHT}
               priority
               sizes="(max-width: 1024px) 100vw, 1024px"
-              className="w-full h-full object-cover"
+              className={`w-full h-full ${product.imageFit === "contain" ? "object-contain bg-bamboo-50" : "object-cover"}`}
             />
           </div>
+
+          {galleryImages.length > 0 && (
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-bamboo-900 mb-5">More Views</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {galleryImages.map((image) => (
+                  <div
+                    key={image.src}
+                    className="relative aspect-3/2 rounded-2xl overflow-hidden border border-bamboo-100"
+                  >
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      width={PRODUCT_IMAGE_WIDTH}
+                      height={PRODUCT_IMAGE_HEIGHT}
+                      loading="lazy"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="w-full h-full object-contain bg-bamboo-50"
+                    />
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Full description */}

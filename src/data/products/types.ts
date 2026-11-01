@@ -4,6 +4,11 @@ export interface ProductSize {
   applications: string;
 }
 
+export interface ProductImage {
+  src: string;
+  alt: string;
+}
+
 export interface Product {
   slug: string;
   name: string;
@@ -16,6 +21,8 @@ export interface Product {
   idealFor: string;
   image: string;
   imageAlt: string;
+  imageFit?: "cover" | "contain";
+  galleryImages?: ProductImage[];
   /** Only present for products supplied in graded sizes (Precision Bamboo Strips). */
   sizes?: ProductSize[];
 }

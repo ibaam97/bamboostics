@@ -3,8 +3,9 @@ import { bambooRollUpBlinds } from "./bamboo-roll-up-blinds";
 import { bambooPenHolders } from "./bamboo-pen-holders";
 import { woodenLatticeFence } from "./wooden-lattice-fence";
 import { precisionBambooStrips } from "./precision-bamboo-strips";
+import { renderProducts } from "./render-products";
 
-export type { Product, ProductSize } from "./types";
+export type { Product, ProductImage, ProductSize } from "./types";
 export { PRODUCT_IMAGE_WIDTH, PRODUCT_IMAGE_HEIGHT } from "./types";
 
 export const products: Product[] = [
@@ -12,6 +13,7 @@ export const products: Product[] = [
   bambooPenHolders,
   woodenLatticeFence,
   precisionBambooStrips,
+  ...renderProducts,
 ];
 
 export function getAllProducts(): Product[] {

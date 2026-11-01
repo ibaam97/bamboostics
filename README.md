@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a [Next.js](https://nextjs.org) project for the BambooStic catalogue website.
 
 ## Getting Started
 
@@ -16,9 +16,16 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Product content and image assets
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Product records are defined under [`src/data/products/`](/Users/ibrahimayodeji/bamboostics/src/data/products).
+- Main catalogue and product-detail pages are:
+  - [`src/app/catalogue/page.tsx`](/Users/ibrahimayodeji/bamboostics/src/app/catalogue/page.tsx)
+  - [`src/app/catalogue/[slug]/page.tsx`](/Users/ibrahimayodeji/bamboostics/src/app/catalogue/[slug]/page.tsx)
+- Branding assets live in [`public/branding/`](/Users/ibrahimayodeji/bamboostics/public/branding).
+- Product render assets live in [`public/products/renders/`](/Users/ibrahimayodeji/bamboostics/public/products/renders).
+
+The app uses `next/image` for optimized image delivery on catalogue and product pages.
 
 ## Learn More
 

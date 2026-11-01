@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const navLinks = [
@@ -20,19 +21,17 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-full bg-bamboo-500 flex items-center justify-center group-hover:bg-bamboo-600 transition-colors">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                className="w-6 h-6 text-white"
-                stroke="currentColor"
-                strokeWidth="1.5"
-              >
-                <path d="M12 2v20M12 2c-2 4-2 8 0 10M12 2c2 4 2 8 0 10M12 12c-2 4-2 8 0 10M12 12c2 4 2 8 0 10" />
-                <path d="M8 6h8M8 12h8M8 18h8" strokeDasharray="2 2" />
-              </svg>
+            <div className="relative h-10 w-36 overflow-hidden rounded-xl border border-bamboo-200 bg-white">
+              <Image
+                src="/branding/bamboostic-logo.jpg"
+                alt="BambooStic logo"
+                fill
+                sizes="144px"
+                className="object-contain p-1"
+                priority
+              />
             </div>
-            <span className="text-2xl font-bold text-bamboo-800 tracking-tight">
+            <span className="hidden sm:block text-2xl font-bold text-bamboo-800 tracking-tight">
               Bamboo<span className="text-bamboo-500">stic</span>
             </span>
           </Link>

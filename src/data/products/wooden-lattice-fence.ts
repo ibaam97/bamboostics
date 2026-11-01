@@ -24,7 +24,17 @@ export const woodenLatticeFence: Product = {
   ],
   idealFor:
     "Garden and property boundaries, courtyard and terrace dividers, balcony screening, climbing plants and trellis work, screening for bins, tanks and generators, hotels, restaurants and event venues.",
-  image: "/products/wooden-lattice-fence.webp",
+  image: "/products/renders/lattice-fence-render-hero.jpg",
   imageAlt:
     "A framed wooden lattice fence panel with diagonal crossed slats set in a solid timber frame, standing along a planted garden border.",
+  galleryImages: [
+    {
+      src: "/products/renders/lattice-bay-render-hero.jpg",
+      alt: "A single lattice bay panel mounted between two outdoor posts.",
+    },
+    {
+      src: "/products/renders/lattice-fence-render-close.jpg",
+      alt: "Close-up of intersecting lattice strips showing the panel detail and finish.",
+    },
+  ],
 };

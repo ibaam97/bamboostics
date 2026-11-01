@@ -134,25 +134,44 @@ const audiences = [
     title: "Manufacturers & OEMs",
     description:
       "Consistent strip and board supply at scale, with spec sheets and certificates of analysis. Source the bamboo feedstock your production line needs.",
-    icon: "🏭",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 21V9l6 3V9l6 3V5l6 3v13H3Z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M7 16h2m3 0h2m3 0h2M7 21v-3m5 3v-3m5 3v-3M15 5V3m3 3V4" />
+      </svg>
+    ),
   },
   {
     title: "Builders & Developers",
     description:
       "Treated poles, decking, and structural panels for residential and commercial projects — EUDR-compliant and deforestation-free by design.",
-    icon: "🏗️",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 21h18M5 21V8l7-5 7 5v13M5 8h14M8 11v2m4-2v2m4-2v2m-8 2v2m4-2v2m4-2v2" />
+      </svg>
+    ),
   },
   {
     title: "International Buyers",
     description:
       "Nigeria-origin bamboo with full chain-of-custody traceability. Ready for EU, UK, and US procurement standards — and competitive against China on price.",
-    icon: "🌍",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
+        <circle cx="12" cy="12" r="9" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.5 9h17m-17 6h17M12 3a14.5 14.5 0 0 1 0 18m0-18a14.5 14.5 0 0 0 0 18" />
+      </svg>
+    ),
   },
   {
     title: "Retail & Distribution",
     description:
       "White-label finished goods — flooring, panels, and accessories — for your brand, your packaging, your market.",
-    icon: "📦",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="m3 7 9-4 9 4-9 4-9-4Z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 7v10l9 4 9-4V7M12 11v10m-4-16 9 4" />
+      </svg>
+    ),
   },
 ];
 
@@ -214,7 +233,9 @@ export default function ProductsPage() {
                 key={a.title}
                 className="p-6 rounded-2xl bg-cream border border-bamboo-100"
               >
-                <span className="text-3xl mb-4 block">{a.icon}</span>
+                <span className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-bamboo-100 text-bamboo-700 [&>svg]:h-6 [&>svg]:w-6">
+                  {a.icon}
+                </span>
                 <h3 className="text-lg font-bold text-bamboo-900 mb-2">{a.title}</h3>
                 <p className="text-sm text-bamboo-600 leading-relaxed">{a.description}</p>
               </div>

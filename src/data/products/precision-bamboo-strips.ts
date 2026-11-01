@@ -26,9 +26,19 @@ export const precisionBambooStrips: Product = {
   ],
   idealFor:
     "Furniture makers and joinery workshops, cabinet and door manufacturers, weavers, basket makers and craft producers, interior fit-out and construction, décor and panelling, schools, studios and DIY projects.",
-  image: "/products/precision-bamboo-strips.webp",
+  image: "/products/renders/precision-strips-render-hero.jpg",
   imageAlt:
     "A fan of precision-milled bamboo strips in several widths, showing clean square-cut ends and smooth, straight grain.",
+  galleryImages: [
+    {
+      src: "/products/renders/rustic-strips-render-hero.jpg",
+      alt: "Rustic bamboo strips arranged as a bundled set for fabrication and decorative work.",
+    },
+    {
+      src: "/products/renders/slats-render-hero.jpg",
+      alt: "Bamboo slats displayed in varied widths with smooth, straight finishes.",
+    },
+  ],
   sizes: [
     {
       size: "4 x 40 mm",
